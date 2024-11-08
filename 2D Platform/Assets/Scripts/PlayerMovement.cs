@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 5f;
+    public float jumpSpeed = 8f;
     private float direction = 0f;
     private Rigidbody2D player;
 
@@ -30,6 +31,10 @@ public class PlayerMovement : MonoBehaviour
         {
             player.velocity = new Vector2(0, player.velocity.y);
         }
-        
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+        }
     }
 }
