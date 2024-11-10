@@ -30,13 +30,16 @@ public class PlayerMovement : MonoBehaviour
     {
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         direction = Input.GetAxis("Horizontal");
+
         if(direction > 0f)
         {
             player.velocity = new Vector2(direction * speed, player.velocity.y);
+            transform.localScale = new Vector2(1.9723f, 1.9723f);
         }
         else if (direction < 0f)
         {
             player.velocity = new Vector2(direction * speed, player.velocity.y);
+            transform.localScale = new Vector2(-1.9723f, 1.9723f);
         }
         else
         {
