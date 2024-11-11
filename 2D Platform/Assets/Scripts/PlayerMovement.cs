@@ -67,6 +67,9 @@ public class PlayerMovement : MonoBehaviour
         if (collision.tag == "FallDetector")
         {
             transform.position = respawnPoint;
+        }else if(collision.tag == "CheckPoint")
+        {
+            respawnPoint = transform.position;
         }
     }
 }
