@@ -8,6 +8,7 @@ TagManager:
   - CheckPoint
   - NextLevel
   - PreviousLevel
+  - Gem
   layers:
   - Default
   - TransparentFX

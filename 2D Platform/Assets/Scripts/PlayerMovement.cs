@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
     public float jumpSpeed = 8f;
     private float direction = 0f;
+ 
 
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -81,6 +82,12 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             respawnPoint = transform.position;
+        }
+        else if(collision.tag == "Gem")
+        {
+            Scoring.totalScore += 1;
+            Debug.Log(Scoring.totalScore);
+            collision.gameObject.SetActive(false);//Hide object in Scene but still in Scene and can't interact.
         }
     }
 }
