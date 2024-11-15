@@ -9,6 +9,7 @@ TagManager:
   - NextLevel
   - PreviousLevel
   - Gem
+  - Trap
   layers:
   - Default
   - TransparentFX

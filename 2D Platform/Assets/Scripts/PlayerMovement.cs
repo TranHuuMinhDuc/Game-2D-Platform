@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 respawnPoint;
     public GameObject fallDetector;
+    public HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -65,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             Attack();
         }
@@ -103,6 +104,15 @@ public class PlayerMovement : MonoBehaviour
             collision.gameObject.SetActive(false);//Hide object in Scene but still in Scene and can't interact.
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.tag == "Trap")
+        {
+            healthBar.Damage(0.002f);
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawSphere(groundCheck.position, groundCheckRadius);
