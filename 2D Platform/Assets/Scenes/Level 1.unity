@@ -508,7 +508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6434663905971005205, guid: a47137fdb964df64395395e04b191422, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -722,7 +722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3608940313660213737, guid: abfd58cc73754a64e89165191432b60f, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 7871691056469365260, guid: abfd58cc73754a64e89165191432b60f, type: 3}
       propertyPath: m_LocalScale.x
@@ -920,7 +920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7826183851801972976, guid: b63c4da7f2f27ea4c9311b21bf63ad3b, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1283,7 +1283,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -2696,7 +2696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1867738589030561217, guid: 0a44dad8616628a4983dd517a20f2dcc, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4460426172432959266, guid: 0a44dad8616628a4983dd517a20f2dcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -2770,7 +2770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5385395173807112578, guid: 526781e534dd1a041b9405868d7e85ab, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 7456671936325328037, guid: 526781e534dd1a041b9405868d7e85ab, type: 3}
       propertyPath: m_LocalScale.x
@@ -2953,7 +2953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8792844727591747313, guid: f9e73223009798240b6a33d0c255c405, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2984,7 +2984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5591296469595873639, guid: 182dfa2980a7f3a4fa2ab54d1e784d0d, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8896306145957624573, guid: 182dfa2980a7f3a4fa2ab54d1e784d0d, type: 3}
       propertyPath: m_LocalScale.x
@@ -3171,6 +3171,10 @@ PrefabInstance:
       propertyPath: fallDetector
       value: 
       objectReference: {fileID: 1930512675}
+    - target: {fileID: 4913755029029685168, guid: 2ec80670675c7f6488309bd430f6f2f9, type: 3}
+      propertyPath: groundCheckRadius
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3241,6 +3245,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5627425777533721486, guid: 072a5fc1a44be814c83916cb8c8fdb63, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627425777533721486, guid: 072a5fc1a44be814c83916cb8c8fdb63, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627425777533721486, guid: 072a5fc1a44be814c83916cb8c8fdb63, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8667835297294992495, guid: 072a5fc1a44be814c83916cb8c8fdb63, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -92,4 +92,8 @@ public class PlayerMovement : MonoBehaviour
             collision.gameObject.SetActive(false);//Hide object in Scene but still in Scene and can't interact.
         }
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(groundCheck.position, groundCheckRadius);
+    }
 }
