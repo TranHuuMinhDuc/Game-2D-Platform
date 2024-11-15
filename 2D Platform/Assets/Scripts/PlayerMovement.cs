@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpSpeed = 8f;
     private float direction = 0f;
+    public Text scoreText;
  
 
     public Transform groundCheck;
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<Animator>();
         respawnPoint = transform.position;
+        scoreText.text = "Score: " + Scoring.totalScore;
     }
 
     // Update is called once per frame
@@ -86,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
         else if(collision.tag == "Gem")
         {
             Scoring.totalScore += 1;
-            Debug.Log(Scoring.totalScore);
+            scoreText.text = "Score: " + Scoring.totalScore;
             collision.gameObject.SetActive(false);//Hide object in Scene but still in Scene and can't interact.
         }
     }
