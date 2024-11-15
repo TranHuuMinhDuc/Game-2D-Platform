@@ -63,6 +63,17 @@ public class PlayerMovement : MonoBehaviour
         playerAnimation.SetBool("OnGround", isTouchingGround);
 
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
+
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Attack();
+        }
+    }
+
+    private void Attack()
+    {
+        playerAnimation.SetTrigger("Attack");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -96,4 +107,5 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.DrawSphere(groundCheck.position, groundCheckRadius);
     }
+
 }
