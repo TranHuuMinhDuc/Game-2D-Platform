@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetMouseButtonDown(0))
         {
             Attack();
         }
