@@ -32,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
         playerAnimation = GetComponent<Animator>();
         respawnPoint = transform.position;
         scoreText.text = "Score: " + Scoring.totalScore;
+
+        healthBar.OnHealthDepleted += RespawnPlayer;
+
+       
     }
 
     // Update is called once per frame
@@ -40,7 +44,9 @@ public class PlayerMovement : MonoBehaviour
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         direction = Input.GetAxis("Horizontal");
 
-        if(direction > 0f)
+        
+
+        if (direction > 0f)
         {
             player.velocity = new Vector2(direction * speed, player.velocity.y);
             transform.localScale = new Vector2(1.9723f, 1.9723f);
@@ -70,6 +76,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Attack();
         }
+
+        
     }
 
     private void Attack()
@@ -116,6 +124,20 @@ public class PlayerMovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawSphere(groundCheck.position, groundCheckRadius);
+    }
+
+    private void RespawnPlayer()
+    {
+        transform.position = respawnPoint; // Move the player to the respawn point
+        Health.totalHealth = 1f; // Reset health
+        healthBar.setSize(Health.totalHealth); // Update the health bar
+
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe from the event to avoid memory leaks
+        healthBar.OnHealthDepleted -= RespawnPlayer;
     }
 
 }
