@@ -18,17 +18,6 @@ public class HealthBar : MonoBehaviour
     {
         bar = GetComponent<RectTransform>();
         barImage = GetComponent<Image>();
-        if (Health.totalHealth < 0.3f)
-        {
-            barImage.color = Color.red;
-        }
-        
-        setSize(Health.totalHealth);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         if (Health.totalHealth >= 0.3f)
         {
             barImage.color = Color.green;
@@ -37,7 +26,15 @@ public class HealthBar : MonoBehaviour
         {
             barImage.color = Color.red;
         }
-        else if (Health.totalHealth <= 0f)
+        
+
+        setSize(Health.totalHealth);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+         if (Health.totalHealth <= 0f)
         {
             OnHealthDepleted?.Invoke(); // Trigger event when health is zero
         }
@@ -55,7 +52,7 @@ public class HealthBar : MonoBehaviour
             Health.totalHealth = 0f;
         }
 
-        
+
         setSize(Health.totalHealth);
     }
 

@@ -35,12 +35,14 @@ public class PlayerMovement : MonoBehaviour
 
         healthBar.OnHealthDepleted += RespawnPlayer;
 
-       
+
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         direction = Input.GetAxis("Horizontal");
 
@@ -63,7 +65,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isTouchingGround == true)
         {
+            playerAnimation.SetBool("isJumping", true);
             player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+        }else if (isTouchingGround)
+        {
+            playerAnimation.SetBool("isJumping", false);
         }
 
         playerAnimation.SetFloat("Speed", Mathf.Abs(player.velocity.x));
@@ -76,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Attack();
         }
+       
 
         
     }
