@@ -47,6 +47,39 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGround
+    uniqueID: 206903579
+    locked: 0
+  - name: Bush BackGround
+    uniqueID: 3391539271
+    locked: 0
+  - name: Woods Fourth
+    uniqueID: 2233929389
+    locked: 0
+  - name: Woods Third
+    uniqueID: 3201555857
+    locked: 0
+  - name: Vines
+    uniqueID: 2809069103
+    locked: 0
+  - name: Woods Second
+    uniqueID: 1802857013
+    locked: 0
+  - name: Woods First
+    uniqueID: 2135926561
+    locked: 0
+  - name: TileMap 2
+    uniqueID: 2171213063
+    locked: 0
+  - name: TIleMap 1
+    uniqueID: 405598505
+    locked: 0
+  - name: Structure
+    uniqueID: 3396996837
+    locked: 0
+  - name: Player
+    uniqueID: 3249308513
+    locked: 0
   - name: TopDamagePopUp
     uniqueID: 3677569693
     locked: 0
