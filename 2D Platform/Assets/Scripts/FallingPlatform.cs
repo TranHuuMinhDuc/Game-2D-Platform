@@ -1,13 +1,15 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FallingPlatform : MonoBehaviour
 {
-    private float fallDelay = 1f;
-    private float destroyDelay = 1f;
+    public float fallDelay = 1f;
+    public float destroyDelay = 1f;
 
     [SerializeField] private Rigidbody2D rb;
+
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -23,4 +25,6 @@ public class FallingPlatform : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Dynamic;
         Destroy(gameObject, destroyDelay);
     }
+
+    
 }
