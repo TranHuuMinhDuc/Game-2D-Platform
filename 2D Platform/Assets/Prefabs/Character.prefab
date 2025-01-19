@@ -216,10 +216,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  jumpSpeed: 4
+  jumpSpeed: 4.5
+  scoreText: {fileID: 0}
   groundCheck: {fileID: 3735665693112035050}
   groundCheckRadius: 0.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   fallDetector: {fileID: 0}
+  healthBar: {fileID: 0}
