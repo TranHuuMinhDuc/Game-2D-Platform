@@ -83,3 +83,6 @@ TagManager:
   - name: TopDamagePopUp
     uniqueID: 3677569693
     locked: 0
+  - name: Trap
+    uniqueID: 1374292635
+    locked: 0
