@@ -50,29 +50,29 @@ public class PlayerMovement : MonoBehaviour
 
         if (direction > 0f)
         {
-            player.velocity = new Vector2(direction * speed, player.velocity.y);
+            player.linearVelocity = new Vector2(direction * speed, player.linearVelocity.y);
             transform.localScale = new Vector2(1.9723f, 1.9723f);
         }
         else if (direction < 0f)
         {
-            player.velocity = new Vector2(direction * speed, player.velocity.y);
+            player.linearVelocity = new Vector2(direction * speed, player.linearVelocity.y);
             transform.localScale = new Vector2(-1.9723f, 1.9723f);
         }
         else
         {
-            player.velocity = new Vector2(0, player.velocity.y);
+            player.linearVelocity = new Vector2(0, player.linearVelocity.y);
         }
 
         if (Input.GetButtonDown("Jump") && isTouchingGround == true)
         {
             playerAnimation.SetBool("isJumping", true);
-            player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+            player.linearVelocity = new Vector2(player.linearVelocity.x, jumpSpeed);
         }else if (isTouchingGround)
         {
             playerAnimation.SetBool("isJumping", false);
         }
 
-        playerAnimation.SetFloat("Speed", Mathf.Abs(player.velocity.x));
+        playerAnimation.SetFloat("Speed", Mathf.Abs(player.linearVelocity.x));
         playerAnimation.SetBool("OnGround", isTouchingGround);
 
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
